@@ -63,7 +63,7 @@ The application detects the user's location, provides relevant nearby places, al
 
 | Category | Technology |
 |----------|------------|
-| Language | Java / Kotlin |
+| Language | Java |
 | Platform | Android |
 | UI & Components | Android Jetpack |
 | Authentication | Firebase Authentication |
