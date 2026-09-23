@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Place Photo -->
+        <ImageView
+            android:id="@+id/placeImage"
+            android:layout_width="match_parent"
+            android:height="250dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Place Name -->
+            <TextView
+                android:id="@+id/placeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Place Name"
+                android:textSize="24sp"
+                android:textColor="#1976D2"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Rating -->
+            <TextView
+                android:id="@+id/placeRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⭐ 4.5 (120 reviews)"
+                android:textSize="14sp"
+                android:textColor="#FF9800"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Address -->
+            <TextView
+                android:id="@+id/placeAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="123 Main Street"
+                android:textSize="13sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/placePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="₹ Budget"
+                android:textSize="13sp"
+                android:textColor="#4CAF50"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Buttons Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btnShare"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="Share"
+                    android:textSize="12sp"
+                    android:background="#2196F3"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="❤️ Favorite"
+                    android:textSize="12sp"
+                    android:background="#E91E63"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btnCall"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="📞 Call"
+                    android:textSize="12sp"
+                    android:background="#4CAF50"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnMaps"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="🗺️ Maps"
+                    android:textSize="12sp"
+                    android:background="#FF9800"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- Review Submission Form -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit a Review"
+                android:textSize="18sp"
+                android:textColor="#1976D2"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Name"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/reviewInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Review"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:layout_marginBottom="8dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnSubmitReview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Submit Review"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#4CAF50"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Google Reviews Section Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💬 Reviews"
+                android:textSize="18sp"
+                android:textColor="#1976D2"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- View Reviews Button -->
+            <Button
+                android:id="@+id/btnViewReviews"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="View Reviews"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#1976D2"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Reviews List Container -->
+            <ScrollView
+                android:id="@+id/reviewsScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/reviewsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

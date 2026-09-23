@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Header Title -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="YatraMitra"
+        android:textSize="28sp"
+        android:textColor="#1976D2"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Search nearby places..."
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="14sp"
+        android:background="@drawable/search_bar_bg"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#757575"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Categories Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CATEGORIES"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Categories Buttons (Horizontal Scroll) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Restaurant Button -->
+            <Button
+                android:id="@+id/btnRestaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="🍽️ Restaurant"
+                android:textSize="12sp"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/category_button_bg"
+                android:textColor="#FFFFFF" />
+
+            <!-- Hotel Button -->
+            <Button
+                android:id="@+id/btnHotel"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="🏨 Hotel"
+                android:textSize="12sp"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/category_button_bg"
+                android:textColor="#FFFFFF" />
+
+            <!-- Tourist Spots Button -->
+            <Button
+                android:id="@+id/btnTouristSpot"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="📸 Tourist Spots"
+                android:textSize="12sp"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/category_button_bg"
+                android:textColor="#FFFFFF" />
+
+            <!-- Events Button -->
+            <Button
+                android:id="@+id/btnEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="🎉 Events"
+                android:textSize="12sp"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/category_button_bg"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- Popular Places Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EXPLORE PLACES"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Places List (ScrollView for scrolling) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/placesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Dynamically populated places will appear here -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Buttons Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <!-- Budget Button -->
+        <Button
+            android:id="@+id/btnBudget"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="💰 Budget"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="4dp"
+            android:background="#7C4DFF" />
+
+        <!-- Favorites Button -->
+        <Button
+            android:id="@+id/btnFavorites"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="❤️ Favorites"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="4dp"
+            android:background="#FF6B9D" />
+
+        <!-- Profile Button -->
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="👤 Profile"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="4dp"
+            android:background="#9B59B6" />
+
+    </LinearLayout>
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="🚪 Logout"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="#E74C3C"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

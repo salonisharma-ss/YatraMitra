@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btnBudgetBack"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="← Back"
+            android:textColor="#FFFFFF"
+            android:background="#1976D2"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="💰 Budget Tracker"
+            android:textSize="20sp"
+            android:textColor="#1976D2"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- Total Budget -->
+    <TextView
+        android:id="@+id/totalBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Spent: ₹0.00"
+        android:textSize="24sp"
+        android:textColor="#E91E63"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@drawable/place_card_bg"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/place_card_bg"
+        android:padding="16dp"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/inputAmount"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Amount (₹)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="#F0F0F0"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/inputCategory"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Category (e.g., Restaurant)"
+            android:padding="12dp"
+            android:background="#F0F0F0"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/inputPlace"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Place Name"
+            android:padding="12dp"
+            android:background="#F0F0F0"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnAddExpense"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="➕ Add Expense"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="#4CAF50" />
+
+    </LinearLayout>
+
+    <!-- Expenses List -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recent Expenses"
+        android:textSize="16sp"
+        android:textColor="#1976D2"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/expensesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <!-- Clear All Button -->
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="🗑️ Clear All"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="#FF9800"
+        android:layout_marginTop="12dp" />
+
+</LinearLayout>
